@@ -87,20 +87,23 @@ function game() {
     // Define variables "playerScore" and "computerScore" and initialize them to 0
     let playerScore = 0;
     let computerScore = 0;
-    // Define variable "playerPlay"
+    // Define variable "playerPlay" and "computerPlay"
     let playerPlay;
+    let computerPlay;
     // Define variable "result"
     let result;
     // FOR each of five rounds
     for (let i = 0; i < 5; i++) {
         // Prompt player for hand, then store string in playerPlay
         playerPlay = prompt("Please enter your play");
+        computerPlay = computerPlay();
+        // Call computerPlay for hand, then store string in 
         // Call playRound(), passing into it playerPlay and computerPlay
-        result = playRound(playerPlay, computerPlay());
+        result = playRound(playerPlay, computerPlay);
         // Display round, player play and computer play
         console.log("Round " + (i+1));
         console.log("Player play: " + playerPlay);
-        console.log("Computer play: " + computerPlay());
+        console.log("Computer play: " + computerPlay);
         // Display playRound() message
         console.log(result);
         // IF player wins
