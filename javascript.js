@@ -100,12 +100,12 @@ function game() {
         // Display playRound() message
         console.log(result);
         // IF player wins
-        if (result.slice(4,6) === "win") {
+        if (result.slice(4,7) === "win") {
             // Increment playerScore
             playerScore++;
         }
         // ELSE IF computer wins
-        else if (result.slice(4,7) === "lose") {
+        else if (result.slice(4,8) === "lose") {
             // Increment computerScore
             computerScore++;
         }
