@@ -126,7 +126,5 @@ function game() {
         console.log("It's a tie!");
     }
     // Display final scores
-    console.log("Final scores:");
-    console.log("Player: " + playerScore);
-    console.log("Computer: " + computerScore);
+    console.log("Final scores: Player " + playerScore + " Computer " + computerScore);
 }
