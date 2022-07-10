@@ -77,5 +77,56 @@ function playRound(playerSelection, computerSelection) {
             verdict = "You win! Scissors beats paper";
         }
     }
+
+    // return verdict
+    return verdict;
 }
 
+// game function:
+function game() {
+    // Define variables "playerScore" and "computerScore" and initialize them to 0
+    let playerScore = 0;
+    let computerScore = 0;
+    // Define variable "playerPlay"
+    let playerPlay;
+    // Define variable "result"
+    let result;
+    // FOR each of five rounds
+    for (let i = 0; i < 5; i++) {
+        // Prompt player for hand, then store string in playerPlay
+        playerPlay = prompt("Please enter your play");
+        // Call playRound(), passing into it playerPlay and computerPlay
+        result = playRound(playerPlay, computerPlay());
+        // Display playRound() message
+        console.log(result);
+        // IF player wins
+        if (result.slice(4,6) === "win") {
+            // Increment playerScore
+            playerScore++;
+        }
+        // ELSE IF computer wins
+        else if (result.slice(4,7) === "lose") {
+            // Increment computerScore
+            computerScore++;
+        }
+    }
+    // IF playerScore is less than computerScore
+    if (playerScore < computerScore) {
+        // Display message "Computer wins!"
+        console.log("Computer wins!");
+    }
+    /// ELSE IF playerScore is greater than computerScore
+    else if (playerScore > computerScore) {
+        // Display message "Player wins!"
+        console.log("Player wins!");
+    }
+    // ELSE
+    else {
+        // Display message "It's a tie!"
+        console.log("It's a tie!");
+    }
+    // Display final scores
+    console.log("Final scores:");
+    console.log("Player: " + playerScore);
+    console.log("Computer: " + computerScore);
+}
