@@ -100,7 +100,7 @@ function game() {
         // Display round, player play and computer play
         console.log("Round " + (i+1));
         console.log("Player play: " + playerPlay);
-        console.log("Computer play: " + computerPlay);
+        console.log("Computer play: " + computerPlay());
         // Display playRound() message
         console.log(result);
         // IF player wins
