@@ -97,6 +97,10 @@ function game() {
         playerPlay = prompt("Please enter your play");
         // Call playRound(), passing into it playerPlay and computerPlay
         result = playRound(playerPlay, computerPlay());
+        // Display round, player play and computer play
+        console.log("Round " + (i+1));
+        console.log("Player play: " + playerPlay);
+        console.log("Computer play: " + computerPlay);
         // Display playRound() message
         console.log(result);
         // IF player wins
